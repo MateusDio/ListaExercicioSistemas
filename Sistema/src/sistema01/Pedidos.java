@@ -29,22 +29,20 @@ public class Pedidos {
         this.quantPed = quantPed;
     }
 
-  
     Produtos pr1 = new Produtos();
 
-   public void listProdt() {
-    boolean achou = false;
+    public void listProdt() {
+        boolean achou = false;
 
-    for (Produtos.Item item : pr1.estoque) {
-    if (item.quant < 10) {
-        System.out.println(item);
+        for (Produtos.Item item : pr1.estoque) {   
+            if (item.quant < 10) {    
+                System.out.println(item);
+                achou = true;
+            }
+        }
+
+        if (!achou) {
+            System.out.println("Nenhum produto com quantidade menor que 10.");
+        }
     }
 }
-
-    if (!achou) {
-        System.out.println("Nenhum produto com quantidade menor que 10.");
-    }
-}
-
-    }
-
